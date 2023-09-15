@@ -1,8 +1,8 @@
-
+require("dotenv").config();
 import express from 'express'
 const app = express();
 import mongoose from 'mongoose';
-const port = 3000;
+const port = process.env.PORT || 3000;
 import authRoutes from "./routes/auth";
 import todoRoutes from "./routes/todo";
 import cors from "cors";
@@ -16,4 +16,4 @@ app.listen(port, () => {
     console.log(`Example app listening at http://localhost:${port}`)
 })
 
-mongoose.connect('mongodb+srv://niharhegde163:niharhegde123@cluster0.qjshhhi.mongodb.net/?retryWrites=true&w=majority', { dbName: "assignment" });
+mongoose.connect(process.env.MONGO_URL!);

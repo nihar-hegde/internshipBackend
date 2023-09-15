@@ -2,8 +2,9 @@
   "name": "assignment-1",
   "version": "1.0.0",
   "description": "Convert this from JS to typescript.",
-  "main": "index.js",
+  "main": "app.js",
   "scripts": {
+    "start": "node dist/app.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
@@ -11,6 +12,7 @@
   "license": "ISC",
   "dependencies": {
     "cors": "^2.8.5",
+    "dotenv": "^16.3.1",
     "express": "^4.18.2",
     "jsonwebtoken": "^9.0.1",
     "mongoose": "^7.4.1",
